@@ -13,6 +13,10 @@ final class AdMoviePlayerView: UIView {
     
     private var playerItem : AVPlayerItem!
     private var videoPlayer : AVPlayer!
+    private var fileUrl: URL!
+    private var isConfigured: Bool {
+        return videoPlayer != nil && playerItem != nil
+    }
     
     override init(frame: CGRect){
         super.init(frame: frame)
@@ -23,6 +27,7 @@ final class AdMoviePlayerView: UIView {
     }
     
     func config(with movieFileURL: URL) {
+        guard !isConfigured else { return }
         let avAsset = AVURLAsset(url: movieFileURL)
         let videoPlayerView = AVPlayerView(frame: bounds)
         let movieLayer = videoPlayerView.layer as! AVPlayerLayer
@@ -41,6 +46,14 @@ final class AdMoviePlayerView: UIView {
     
     func start() {
         videoPlayer.play()
+    }
+    
+    func mute() {
+        videoPlayer.volume = 0
+    }
+    
+    func makeSound() {
+        videoPlayer.volume = 1
     }
 }
 
