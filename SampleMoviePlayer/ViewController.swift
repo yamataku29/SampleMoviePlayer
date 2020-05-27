@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        moviePlayerView.config(with: URL(string: "https://initinctest.s3-ap-northeast-1.amazonaws.com/test.mp4")!, delegate: self)
+        moviePlayerView.config(with: URL(string: "")!, delegate: self)
     }
     
     override func viewDidAppear(_ animated: Bool) {
