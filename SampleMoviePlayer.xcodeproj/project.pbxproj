@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		544FEAF8247E05E0009A93D4 /* AdMoviePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544FEAF7247E05E0009A93D4 /* AdMoviePlayerView.swift */; };
 		5459B81A247CF1AA005C0E2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5459B819247CF1AA005C0E2D /* AppDelegate.swift */; };
 		5459B81C247CF1AA005C0E2D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5459B81B247CF1AA005C0E2D /* SceneDelegate.swift */; };
 		5459B81E247CF1AA005C0E2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5459B81D247CF1AA005C0E2D /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		544FEAF7247E05E0009A93D4 /* AdMoviePlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMoviePlayerView.swift; sourceTree = "<group>"; };
 		5459B816247CF1AA005C0E2D /* SampleMoviePlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleMoviePlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5459B819247CF1AA005C0E2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5459B81B247CF1AA005C0E2D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				5459B824247CF1AB005C0E2D /* LaunchScreen.storyboard */,
 				5459B827247CF1AB005C0E2D /* Info.plist */,
 				5459B84B247CF841005C0E2D /* clip.mp4 */,
+				544FEAF7247E05E0009A93D4 /* AdMoviePlayerView.swift */,
 			);
 			path = SampleMoviePlayer;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				5459B81E247CF1AA005C0E2D /* ViewController.swift in Sources */,
 				5459B81A247CF1AA005C0E2D /* AppDelegate.swift in Sources */,
 				5459B81C247CF1AA005C0E2D /* SceneDelegate.swift in Sources */,
+				544FEAF8247E05E0009A93D4 /* AdMoviePlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
