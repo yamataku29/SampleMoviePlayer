@@ -68,11 +68,19 @@
                                     <action selector="tapStopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="14h-ag-gnB"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jo2-U4-x4g">
+                                <rect key="frame" x="186" y="199" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="rD6-C2-Ia6" firstAttribute="trailing" secondItem="qA1-hQ-rZi" secondAttribute="trailing" constant="-20" id="0R5-pz-a9Q"/>
                             <constraint firstItem="0Nu-jK-eRq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="4U4-84-mgP"/>
+                            <constraint firstItem="qA1-hQ-rZi" firstAttribute="top" secondItem="Jo2-U4-x4g" secondAttribute="bottom" constant="120" id="86K-qo-pXx"/>
+                            <constraint firstItem="Jo2-U4-x4g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GPa-ta-PF1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0rA-RV-aWb" secondAttribute="trailing" constant="100" id="IXF-ZK-2AE"/>
                             <constraint firstItem="rD6-C2-Ia6" firstAttribute="bottom" secondItem="qA1-hQ-rZi" secondAttribute="bottom" constant="-20" id="RpK-FL-PBn"/>
                             <constraint firstItem="qA1-hQ-rZi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Rqo-06-hLH"/>
@@ -89,6 +97,7 @@
                     <connections>
                         <outlet property="moviePlayerView" destination="qA1-hQ-rZi" id="CL9-1k-tkJ"/>
                         <outlet property="soundButton" destination="z4t-fU-heZ" id="gYF-kZ-Nmx"/>
+                        <outlet property="titleLabel" destination="Jo2-U4-x4g" id="axa-f3-hzX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet private weak var moviePlayerView: AdMoviePlayerView!
     @IBOutlet private weak var soundButton: UIButton!
+    @IBOutlet private weak var titleLabel: UILabel!
     @IBAction func tapStartButton(_ sender: UIButton) {
         moviePlayerView.start()
     }
@@ -30,11 +31,17 @@ class ViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        moviePlayerView.config(with: URL(string: "https://initinctest.s3-ap-northeast-1.amazonaws.com/test.mp4")!)
+        moviePlayerView.config(with: URL(string: "https://initinctest.s3-ap-northeast-1.amazonaws.com/test.mp4")!, delegate: self)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         isSoundMuted = true
+    }
+}
+
+extension ViewController: AdMoviePlayerViewDelegate {
+    func didEndMovie() {
+        titleLabel.text = "動画終了"
     }
 }

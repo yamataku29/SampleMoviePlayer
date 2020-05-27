@@ -9,11 +9,16 @@
 import UIKit
 import AVFoundation
 
+protocol AdMoviePlayerViewDelegate: class {
+    func didEndMovie()
+}
+
 final class AdMoviePlayerView: UIView {
     
     private var playerItem : AVPlayerItem!
     private var videoPlayer : AVPlayer!
     private var fileUrl: URL!
+    private weak var delegate: AdMoviePlayerViewDelegate?
     private var isConfigured: Bool {
         return videoPlayer != nil && playerItem != nil
     }
@@ -26,8 +31,10 @@ final class AdMoviePlayerView: UIView {
         super.init(coder: coder)!
     }
     
-    func config(with movieFileURL: URL) {
+    func config(with movieFileURL: URL, delegate: AdMoviePlayerViewDelegate) {
         guard !isConfigured else { return }
+        self.delegate = delegate
+        
         let avAsset = AVURLAsset(url: movieFileURL)
         let videoPlayerView = AVPlayerView(frame: bounds)
         let movieLayer = videoPlayerView.layer as! AVPlayerLayer
@@ -38,6 +45,8 @@ final class AdMoviePlayerView: UIView {
         movieLayer.videoGravity = AVLayerVideoGravity.resizeAspect
         movieLayer.player = videoPlayer
         layer.addSublayer(movieLayer)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.endPlaying), name: .AVPlayerItemDidPlayToEndTime, object: playerItem)
     }
     
     func stop() {
@@ -54,6 +63,10 @@ final class AdMoviePlayerView: UIView {
     
     func makeSound() {
         videoPlayer.volume = 1
+    }
+    
+    @objc private func endPlaying() {
+        delegate?.didEndMovie()
     }
 }
 
