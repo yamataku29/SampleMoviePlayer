@@ -14,9 +14,45 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qA1-hQ-rZi" customClass="AdMoviePlayerView" customModule="SampleMoviePlayer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="340" width="414" height="216"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="z3k-GL-6hr"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Nu-jK-eRq">
+                                <rect key="frame" x="100" y="732" width="32" height="30"/>
+                                <state key="normal" title="start"/>
+                                <connections>
+                                    <action selector="tapStartButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J6W-Yo-ENc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0rA-RV-aWb">
+                                <rect key="frame" x="283" y="732" width="31" height="30"/>
+                                <state key="normal" title="stop"/>
+                                <connections>
+                                    <action selector="tapStopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="14h-ag-gnB"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0Nu-jK-eRq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="4U4-84-mgP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0rA-RV-aWb" secondAttribute="trailing" constant="100" id="IXF-ZK-2AE"/>
+                            <constraint firstItem="qA1-hQ-rZi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Rqo-06-hLH"/>
+                            <constraint firstItem="qA1-hQ-rZi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gkW-xV-vg7"/>
+                            <constraint firstItem="qA1-hQ-rZi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lcx-PF-7V2"/>
+                            <constraint firstItem="qA1-hQ-rZi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="prv-Gi-glq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0rA-RV-aWb" secondAttribute="bottom" constant="100" id="y0e-G2-X5X"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0Nu-jK-eRq" secondAttribute="bottom" constant="100" id="zhE-XO-UfH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="moviePlayerView" destination="qA1-hQ-rZi" id="CL9-1k-tkJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

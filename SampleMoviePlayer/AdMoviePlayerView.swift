@@ -19,7 +19,7 @@ final class AdMoviePlayerView: UIView {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)!
     }
     
     func config(with movieFileURL: URL) {

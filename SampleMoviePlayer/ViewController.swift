@@ -9,6 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-    override func viewDidLoad() {
+    @IBOutlet private weak var moviePlayerView: AdMoviePlayerView!
+    @IBAction func tapStartButton(_ sender: UIButton) {
+        moviePlayerView.start()
+    }
+    @IBAction func tapStopButton(_ sender: UIButton) {
+        moviePlayerView.stop()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        moviePlayerView.config(with: URL(string: "https://initinctest.s3-ap-northeast-1.amazonaws.com/test.mp4")!)
     }
 }
