@@ -22,6 +22,8 @@ class ViewController: UIViewController {
         isSoundMuted = !isSoundMuted
     }
     
+    private let movieFilePath = ""
+    
     var isSoundMuted = false {
         didSet {
             isSoundMuted ? moviePlayerView.mute() : moviePlayerView.makeSound()
@@ -31,7 +33,7 @@ class ViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        moviePlayerView.config(with: URL(string: "")!, delegate: self)
+        moviePlayerView.config(with: URL(string: movieFilePath)!, delegate: self)
     }
     
     override func viewDidAppear(_ animated: Bool) {
