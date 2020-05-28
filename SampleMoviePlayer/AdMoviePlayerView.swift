@@ -58,11 +58,11 @@ final class AdMoviePlayerView: UIView {
     }
     
     func mute() {
-        videoPlayer.volume = 0
+        videoPlayer.isMuted = true
     }
     
     func makeSound() {
-        videoPlayer.volume = 1
+        videoPlayer.isMuted = false
     }
     
     @objc private func endPlaying() {
